@@ -1,5 +1,5 @@
 #  ExpenseTracker
-A simple and efficient Expense Tracker application built with **React**. Manage your income and expenses, track your balance, and visualize your spending with an interactive chart. The app helps you stay on top of your finances with ease.
+A simple and efficient Expense Tracker application . Manage your income and expenses, track your balance, and visualize your spending with an interactive chart. The app helps you stay on top of your finances with ease.
 
 
 
