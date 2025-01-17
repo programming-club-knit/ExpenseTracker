@@ -16,7 +16,7 @@ A simple and efficient Expense Tracker application built with **React**. Manage 
 
 4. ### Navigate to the Project Directory:
 
-       cd ExpenseTracker
+       cd ExpenseTracker/index.html
 
 5. ### Open Live Server:
 
