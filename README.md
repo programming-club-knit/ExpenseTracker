@@ -16,7 +16,7 @@ A simple and efficient Expense Tracker application . Manage your income and expe
 
 4. ### Navigate to the Project Directory:
 
-       cd ExpenseTracker/index.html
+       cd ExpenseTracker
 
 5. ### Open Live Server:
 
