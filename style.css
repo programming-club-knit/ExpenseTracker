@@ -45,6 +45,13 @@ button {
   border-radius: 5px;
 }
 
+.NegError {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  display: none; /* Hide by default */
+}
+
 button {
   background: #fff;
   color: #764ba2;
