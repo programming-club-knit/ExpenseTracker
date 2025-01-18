@@ -2,6 +2,7 @@ const expenseForm = document.getElementById("expense-form");
 const descriptionInput = document.getElementById("description");
 const amountInput = document.getElementById("amount");
 const typeInput = document.getElementById("type");
+const categoryInput = document.getElementById("category");
 const transactionList = document.getElementById("transaction-list");
 const balanceElement = document.getElementById("balance");
 const chartCanvas = document.getElementById("chart");
@@ -14,12 +15,21 @@ if (localStorage.getItem("transactions")) {
     updateUI();
 }
 
+typeInput.addEventListener("change", () => {
+  if (typeInput.value === "expense") {
+    categoryInput.style.display = "block"; 
+  } else {
+    categoryInput.style.display = "none"; 
+  }
+});
+
 // Add transaction
 expenseForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const description = descriptionInput.value.trim();
     const amount = +amountInput.value;
     const type = typeInput.value;
+    const category = categoryInput.value;
 
     if (amount <= 0){
         document.getElementById("NegError").innerHTML = "Amount must be a positive number"
@@ -34,6 +44,7 @@ expenseForm.addEventListener("submit", (e) => {
             description,
             amount,
             type,
+            category
         };
         transactions.push(transaction);
         updateUI();
@@ -59,6 +70,7 @@ function updateUI() {
       <li>
         <span>${transaction.description}</span>
         <span>$${transaction.amount.toFixed(2)}</span>
+        <span>${transaction.category ? transaction.category : 'No Category'}</span>
         <button onclick="deleteTransaction(${transaction.id})">Delete</button>
       </li>
     `
