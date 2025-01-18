@@ -21,6 +21,13 @@ expenseForm.addEventListener("submit", (e) => {
     const amount = +amountInput.value;
     const type = typeInput.value;
 
+    if (amount <= 0){
+        document.getElementById("NegError").innerHTML = "Amount must be a positive number"
+        document.getElementById("NegError").style.display = "block"
+        return;
+    } 
+    document.getElementById("NegError").style.display = "none"
+    
     if (description && amount) {
         const transaction = {
             id: Date.now(),
